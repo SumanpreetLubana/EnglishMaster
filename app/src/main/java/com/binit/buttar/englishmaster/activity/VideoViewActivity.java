@@ -20,22 +20,7 @@ public class VideoViewActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_video_view);
-        vi = getIntent().getExtras().getString("video");
-        img_back = findViewById(R.id.img_back);
-        videoView = findViewById(R.id.videoView);
 
-        img_back.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                onBackPressed();
-            }
-        });
-
-        Uri uri = Uri.parse(vi);
-        videoView.setMediaController(new MediaController(this));
-        videoView.setVideoURI(uri);
-        videoView.requestFocus();
-        videoView.start();
     }
 
 
