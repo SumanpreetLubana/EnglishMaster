@@ -5,6 +5,14 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
+    <uses-permission-sdk-23 android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_SMS" />
+    <uses-permission-sdk-23 android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
+    <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/logo"
@@ -13,34 +21,18 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activity.SplashActivity">
+
+        <meta-data
+            android:name="instamojo.orderauth.url"
+            android:value="http://becomeenglishchampion.com/english/access_token.php" />
+
+        <activity android:name=".activity.Main2Activity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.DashboardActivity" />
-        <activity android:name=".activity.ChapterDetailActivity" />
-        <activity android:name=".activity.ChaptersListActivity" />
-        <activity android:name=".activity.SetListActivity" />
-        <activity android:name=".activity.VideoViewActivity" />
-        <activity android:name=".activity.UserFormActivity"/>
-    <meta-data android:name="instamojo.orderauth.url"
-                   android:value="http://becomeenglishchampion.com/english/access_token.php"
-            />
     </application>
-    <uses-permission-sdk-23 android:name="android.permission.RECEIVE_SMS"/>
-
-    <uses-permission-sdk-23 android:name="android.permission.READ_SMS"/>
-
-    <uses-permission-sdk-23 android:name="android.permission.READ_PHONE_STATE"/>
-
-    <uses-permission android:name="android.permission.RECEIVE_SMS"/>
-
-    <uses-permission android:name="android.permission.READ_SMS"/>
-
-    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
-
 
 </manifest>
